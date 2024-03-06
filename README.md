@@ -1,1 +1,1 @@
-# PurpleHack2024
+# PurpleHack2024 Frontend
