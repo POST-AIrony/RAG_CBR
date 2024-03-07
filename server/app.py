@@ -20,7 +20,7 @@ try:
     connection.commit()
     print("Database connected")
 except Exception as e:
-    print("Dataabase error: ", str(e))
+    print("Database error: ", str(e))
 
 
 async def lifespan(router: FastAPI):
