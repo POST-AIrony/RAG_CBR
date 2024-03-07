@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 
 from server import database, schemas
@@ -31,6 +32,12 @@ async def ping():
 @app.post("/message")
 async def new_message(messages: schemas.ChatInfo):
     return  # res =  ml(app.state.model, messages)
+
+
+@app.get("/", response_class=HTMLResponse)
+def index():
+    html_content = "hello"
+    return HTMLResponse(content=html_content, status_code=200)
 
 
 async def add_vector():
