@@ -1,0 +1,7 @@
+CREATE EXTENSION IF NOT EXISTS vector;
+
+
+CREATE TABLE documents (
+    id SERIAL PRIMARY KEY,
+    text TEXT NOT NULL,
+    vector VECTOR NOT NULL);
