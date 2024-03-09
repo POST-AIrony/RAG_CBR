@@ -28,7 +28,7 @@ client.command(
 ) ENGINE = MergeTree PRIMARY KEY tuple();"""
 )
 
-with open("data.json", "r", encoding="utf-8") as file:
+with open("server/RAG/data.json", "r", encoding="utf-8") as file:
     data = json.load(file)
 
 for item in data:
