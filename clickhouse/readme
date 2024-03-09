@@ -1,6 +1,8 @@
 docker-compose up -d
 
 docker exec ch_server bash
+apt-get update
+apt install nano
 nano /etc/clickhouse-server/users.xml
 
 add
