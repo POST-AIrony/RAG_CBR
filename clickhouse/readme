@@ -1,0 +1,25 @@
+docker-compose up -d
+
+docker exec ch_server bash
+nano /etc/clickhouse-server/users.xml
+
+add
+<access_management>1</access_management>
+<named_collection_control>1</named_collection_control>
+<show_named_collections>1</show_named_collections>
+<show_named_collections_secrets>1</show_named_collections_secrets>
+<access_management>1</access_management>
+
+docker-compose exec ch_server clickhouse-client
+
+CREATE ROLE 'admin';
+GRANT ALL ON *.* TO admin WITH GRANT OPTION;
+create user test identified with plaintext_password by 'test';
+GRANT admin to test;
+
+from python
+import clickhouse_connect
+
+client = clickhouse_connect.get_client(
+    host="127.0.0.1", username="test", password="test"
+)
