@@ -32,9 +32,10 @@ def search_result(connection, vector: list[float], limit: int = 5):
                     "date": item[2],
                     "num": item[3],
                     "emb": item[4],
+                    "dist": dist,
                 }
             )
-    res.sort(reverse=False, key=lambda x: x["emb"])
+    res.sort(reverse=False, key=lambda x: x["dist"])
     print("Work: ", time.time() - start)
     return res[0:limit]
 
