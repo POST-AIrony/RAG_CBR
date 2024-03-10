@@ -4,6 +4,10 @@ from scipy.spatial import distance
 from transformers import AutoModel, AutoTokenizer
 
 
+
+TABLE_NAME = "SbertEmb"
+MODEL_NAME = "ai-forever/sbert_large_nlu_ru"
+
 def search_results(connection, table_name: str, vector: list[float], limit: int = 5):
     res = []
     with connection.query(f"SELECT * FROM {table_name}").rows_stream as stream:
@@ -51,15 +55,6 @@ def txt2embeddings(text: str, tokenizer, model, device="cpu"):
     return mean_pooling(model_output, encoded_input["attention_mask"])
 
 
-client = clickhouse_connect.get_client(
-    host="dafa-81-5-106-50.ngrok-free.app", port="80"
-)
-print("Ping:", client.ping())
-
-TABLE_NAME = "SbertEmb"
-MODEL_NAME = "ai-forever/sbert_large_nlu_ru"
-
-
 def load_models():
     tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
     model = AutoModel.from_pretrained(MODEL_NAME)
@@ -75,6 +70,17 @@ def get_embembeddings(text_data, model, tokenizer):
 
 def get_result(client, embeddings, TABLE_NAME):
     results = search_results(client, TABLE_NAME, embeddings, 10)
+    if __name__ == "__main__":
+        return results
+    return [results]
 
-    # Исключаем ключ "text" из каждого словаря
-    return [{k: v for k, v in item.items() if k != "dist"} for item in results]
+if __name__ == "__main__":
+    client = clickhouse_connect.get_client(
+    host="dafa-81-5-106-50.ngrok-free.app", port="80"
+    )
+    print("Ping:", client.ping())
+
+    tokenizer, model = load_models()
+    text_data = "Федеральная антимонопольная служба и Центральный банк Российской Федерации рекомендуют кредитным организациям прозрачно информировать клиентов о бонусных программах, включая условия начисления кешбэка, чтобы избежать ввода потребителей в заблуждение и нарушения законодательства о конкуренции и рекламе."
+    print(get_result(client, get_embembeddings(text_data, model, tokenizer), TABLE_NAME))
+    print("ML model unloaded")
