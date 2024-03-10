@@ -42,6 +42,7 @@ async def create_row(name: str, url: str, date: str, num: str, text: str):
     embembedding = pipeline.get_embembeddings(
         text, app.state.model, app.state.tokenizer
     )
+    vectors = ",".join([str(float(i)) for i in embedding])
     # TODO: add to DataBase
 
 
