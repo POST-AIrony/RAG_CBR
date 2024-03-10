@@ -184,3 +184,9 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 .idea/
 pgsql/data
+.data_emb.json
+.data_text.json
+.data.json
+data_emb.json
+data_text.json
+data.json
