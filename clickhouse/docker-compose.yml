@@ -5,15 +5,20 @@ services:
     image: yandex/clickhouse-server
     ports:
       - '8123:8123'
+      - '9000:9000'
     volumes:
       - ./db:/var/lib/clickhouse
     networks:
       - ch_ntw
 
   ch_client:
-    image: yandex/clickhouse-client
+    image: yandex/clickhouse-client:latest
     entrypoint:
       - /bin/sleep
+    depends_on:
+      - ch_server
+    links:
+      - ch_server
     command:
       - infinity
     networks:

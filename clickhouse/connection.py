@@ -40,7 +40,7 @@ def search_result(connection, vector: list[float], limit: int = 5):
 
 
 client = clickhouse_connect.get_client(
-    host="0e42-81-5-106-50.ngrok-free.app", username="test", password="test", port="80"
+    host="121d-81-5-106-50.ngrok-free.app", username="test", password="test", port="80"
 )
 print("Ping:", client.ping())
 
