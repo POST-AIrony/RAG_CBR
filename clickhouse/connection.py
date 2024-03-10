@@ -15,15 +15,15 @@ search = []  # search vector here
 
 def search_result(connection, vector: list[float], limit: int = 5):
     start = time.time()
-    print(f"Serach for vector: {search}")
+    print(f"Serach for vector: {vector}")
     res = []
-    fetch = client.query("SELECT * FROM TinyLlamaEmb")
+    fetch = connection.query("SELECT * FROM TinyLlamaEmb")
 
     with fetch.rows_stream as stream:  # Тут есть коменты
         for item in stream:
             vec = item[-1]
 
-            dist = distance.cosine(search, vec)
+            dist = distance.cosine(vector, vec)
             # dist = dot(search, vec) / (norm(search) * norm(vec))
             res.append(
                 {
