@@ -37,6 +37,14 @@ async def new_message(msg: str):
     )
 
 
+@app.post("/create/row")
+async def create_row(name: str, url: str, date: str, num: str, text: str):
+    embembedding = pipeline.get_embembeddings(
+        text, app.state.model, app.state.tokenizer
+    )
+    # TODO: add to DataBase
+
+
 @app.get("/", response_class=HTMLResponse)
 def index():
     html_content = "hello"
