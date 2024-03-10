@@ -45,10 +45,6 @@ with open("server/RAG/data_text.json", "r", encoding="utf-8") as file:
 new_data = []
 text_data = [item["text"] for item in data]
 
-import time
-
-start = time.time()
-print("токенизатор обрабатывает:")
 encoded_input = tokenizer(
     text_data,
     padding=True,
@@ -57,18 +53,16 @@ encoded_input = tokenizer(
     return_tensors="pt",
 )
 encoded_input = {k: v.to('cuda') for k, v in encoded_input.items()} 
-print("моделька обрабатывает:")
+
 with torch.no_grad():
     model_output = model(**encoded_input)
-print("пулинг обрабатывает:")
+
 sentence_embeddings = mean_pooling(model_output, encoded_input["attention_mask"])
 vectors = [
     ",".join([str(float(i)) for i in sentence]) for sentence in sentence_embeddings
 ]
 for i, vector in enumerate(vectors):
     new_data[i]["emeddings"] = vector
-
-print(time.time() - start)
 
 VALUES = ""
 for item in new_data:
