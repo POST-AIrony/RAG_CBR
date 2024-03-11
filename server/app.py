@@ -2,12 +2,10 @@ import clickhouse_connect
 from fastapi import FastAPI
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
-
 from server.RAG import pipeline
+from server.config import HOST, PORT
 
-client = clickhouse_connect.get_client(
-    host="dafa-81-5-106-50.ngrok-free.app", port="80"
-)
+client = clickhouse_connect.get_client(host=HOST, port=PORT)
 
 
 async def lifespan(router: FastAPI):
@@ -28,21 +26,19 @@ async def ping():
     return {"message": "pong!"}
 
 
-@app.post("/message")
+@app.post("/chat-bot")
 async def new_message(msg: str):
     return pipeline.get_result(
         client,
-        pipeline.get_embembeddings(msg, app.state.model, app.state.tokenizer),
+        pipeline.txt2embeddings(msg, app.state.model, app.state.tokenizer),
         TABLE_NAME=pipeline.TABLE_NAME,
     )
 
 
-@app.post("/create/row")
+@app.post("/append-row")
 async def create_row(name: str, url: str, date: str, num: str, text: str):
-    embembedding = pipeline.get_embembeddings(
-        text, app.state.model, app.state.tokenizer
-    )
-    vectors = ",".join([str(float(i)) for i in embembedding])
+    embedding = pipeline.txt2embeddings(text, app.state.model, app.state.tokenizer)[0]
+    vectors = ",".join([str(float(i)) for i in embedding])
     # TODO: add to DataBase
 
 

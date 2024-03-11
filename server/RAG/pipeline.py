@@ -52,20 +52,13 @@ def txt2embeddings(text: str, tokenizer, model, device="cpu"):
     with torch.no_grad():
         model_output = model(**encoded_input)
 
-    return mean_pooling(model_output, encoded_input["attention_mask"])
+    return mean_pooling(model_output, encoded_input["attention_mask"])[0]
 
 
 def load_models():
     tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
     model = AutoModel.from_pretrained(MODEL_NAME)
     return tokenizer, model
-
-
-# text_data = "Федеральная антимонопольная служба и Центральный банк Российской Федерации рекомендуют кредитным организациям прозрачно информировать клиентов о бонусных программах, включая условия начисления кешбэка, чтобы избежать ввода потребителей в заблуждение и нарушения законодательства о конкуренции и рекламе."
-
-
-def get_embembeddings(text_data, model, tokenizer):
-    return txt2embeddings(text_data, tokenizer, model, device="cpu")[0]
 
 
 def get_result(client, embeddings, TABLE_NAME):
@@ -82,5 +75,5 @@ if __name__ == "__main__":
 
     tokenizer, model = load_models()
     text_data = "Федеральная антимонопольная служба и Центральный банк Российской Федерации рекомендуют кредитным организациям прозрачно информировать клиентов о бонусных программах, включая условия начисления кешбэка, чтобы избежать ввода потребителей в заблуждение и нарушения законодательства о конкуренции и рекламе."
-    print(get_result(client, get_embembeddings(text_data, model, tokenizer), TABLE_NAME))
+    print(get_result(client, txt2embeddings(text_data, model, tokenizer), TABLE_NAME))
     print("ML model unloaded")
