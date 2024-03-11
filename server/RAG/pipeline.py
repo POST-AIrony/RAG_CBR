@@ -1,9 +1,15 @@
 import clickhouse_connect
 import torch
 from scipy.spatial import distance
-from transformers import AutoModel, AutoTokenizer
-from server.config import TABLE_NAME, MODEL_NAME, HOST, PORT
-
+from transformers import AutoModel, AutoTokenizer, pipeline, Conversation
+from server.config import (
+    TABLE_NAME,
+    HOST,
+    PORT,
+    MODEL_EMB_NAME,
+    MODEL_CHAT_NAME,
+    SYSTEM_PROMPT,
+)
 
 
 def search_results(connection, table_name: str, vector: list[float], limit: int = 5):
@@ -50,28 +56,61 @@ def txt2embeddings(text: str, tokenizer, model, device="cpu"):
     with torch.no_grad():
         model_output = model(**encoded_input)
 
-    return mean_pooling(model_output, encoded_input["attention_mask"])[0]
+    return mean_pooling(model_output, encoded_input["attention_mask"])
 
 
-def load_models():
-    tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
-    model = AutoModel.from_pretrained(MODEL_NAME)
+def load_chatbot(model):
+    chatbot = pipeline(
+        model=model,
+        trust_remote_code=True,
+        torch_dtype="auto",
+        device_map="cuda",
+        task="conversational",
+    )
+    return chatbot
+
+
+def generate_answer(chatbot, chat, document):
+    conversation = Conversation()
+    conversation.add_message({"role": "system", "content": SYSTEM_PROMPT})
+    if document:
+        document_template = """
+        CONTEXT:
+        {document}
+
+        Отвечай только на русском языке.
+        ВОПРОС:
+        """
+        conversation.add_message({"role": "user", "content": document_template})
+
+    for message in chat:
+        conversation.add_message(
+            {"role": message["role"], "content": message["content"]}
+        )
+
+    conversation = chatbot(conversation, max_new_tokens=512)
+
+    return conversation[-1]
+
+
+def load_models(model):
+    tokenizer = AutoTokenizer.from_pretrained(model)
+    model = AutoModel.from_pretrained(model)
     return tokenizer, model
 
 
-def get_result(client, embeddings, TABLE_NAME):
-    results = search_results(client, TABLE_NAME, embeddings, 10)
-    if __name__ == "__main__":
-        return results
-    return [results]
-
 if __name__ == "__main__":
-    client = clickhouse_connect.get_client(
-    host=HOST, port=PORT
-    )
+    client = clickhouse_connect.get_client(host=HOST, port=PORT)
     print("Ping:", client.ping())
 
-    tokenizer, model = load_models()
-    text_data = "Федеральная антимонопольная служба и Центральный банк Российской Федерации рекомендуют кредитным организациям прозрачно информировать клиентов о бонусных программах, включая условия начисления кешбэка, чтобы избежать ввода потребителей в заблуждение и нарушения законодательства о конкуренции и рекламе."
-    print(get_result(client, txt2embeddings(text_data, model, tokenizer), TABLE_NAME))
+    tokenizer, model = load_models(MODEL_EMB_NAME)
+    chatbot = load_chatbot(MODEL_CHAT_NAME)
+    chat = [{
+        "role": "user",
+        "content": "Федеральная антимонопольная служба и Центральный банк Российской Федерации рекомендуют кредитным организациям прозрачно информировать клиентов о бонусных программах, включая условия начисления кешбэка, чтобы избежать ввода потребителей в заблуждение и нарушения законодательства о конкуренции и рекламе.",
+    }]
+    embeddings = (pipeline.txt2embeddings(request, model, tokenizer)[0],)
+    search = pipeline.search_results(client, TABLE_NAME, embeddings, 10)
+    document = search[0]["text"]
+    chatbot_answer = generate_answer(chatbot, chat, document)
     print("ML model unloaded")
