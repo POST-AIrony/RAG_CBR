@@ -49,7 +49,7 @@ encoded_input = tokenizer(
     text_data,
     padding=True,
     truncation=True,
-    max_length=24,
+    max_length=512,
     return_tensors="pt",
 )
 encoded_input = {k: v.to('cuda') for k, v in encoded_input.items()} 

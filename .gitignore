@@ -188,7 +188,9 @@ pgsql/data
 .data_text.json
 .data.json
 .data_text_clean_true.json
+.data_emb_true.json
 data_emb.json
 data_text.json
 data.json
 data_text_clean_true.json
+data_emb_true.json

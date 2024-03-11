@@ -45,7 +45,7 @@ def txt2embeddings(text: str, tokenizer, model, device="cpu"):
         padding=True,
         return_tensors="pt",
         truncation=True,
-        max_length=1024,
+        max_length=512,
     )
     encoded_input = {k: v.to(device) for k, v in encoded_input.items()}
 
