@@ -2,11 +2,9 @@ import clickhouse_connect
 import torch
 from scipy.spatial import distance
 from transformers import AutoModel, AutoTokenizer
+from server.config import TABLE_NAME, MODEL_NAME, HOST, PORT
 
 
-
-TABLE_NAME = "SbertEmb"
-MODEL_NAME = "ai-forever/sbert_large_nlu_ru"
 
 def search_results(connection, table_name: str, vector: list[float], limit: int = 5):
     res = []
@@ -69,7 +67,7 @@ def get_result(client, embeddings, TABLE_NAME):
 
 if __name__ == "__main__":
     client = clickhouse_connect.get_client(
-    host="dafa-81-5-106-50.ngrok-free.app", port="80"
+    host=HOST, port=PORT
     )
     print("Ping:", client.ping())
 
