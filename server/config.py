@@ -1,6 +1,6 @@
-HOST = "716c-81-5-106-50.ngrok-free.app"
+HOST = "6146-81-5-106-50.ngrok-free.app"
 PORT = "80"
-TABLE_NAME = "SbertEmbTrue"
+TABLE_NAME = "SbertEmbChunked"
 MODEL_EMB_NAME = "ai-forever/sbert_large_nlu_ru"
 MODEL_CHAT_NAME = "TinyLlama/TinyLlama-1.1B-Chat-v1.0"
 SYSTEM_PROMPT = """

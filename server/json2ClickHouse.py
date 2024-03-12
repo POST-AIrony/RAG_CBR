@@ -21,6 +21,7 @@ def create_table(client, table_name: str) -> None:
     >>> create_table(client, "my_table")
     """
     # Выполняем запрос на создание таблицы
+    float32_type = "Float32," * 1024
     client.command(
         f"""CREATE TABLE IF NOT EXISTS {table_name} (
             Name String,
@@ -28,7 +29,7 @@ def create_table(client, table_name: str) -> None:
             Date String,
             Number String,
             Text String,
-            Embedding Array(Float32)
+            Embedding Tuple({float32_type})
         ) ENGINE = MergeTree PRIMARY KEY tuple();"""
     )
 
@@ -65,12 +66,11 @@ def append_to_clickhouse(client, table_name: str, data: list[dict]) -> None:
 
 if __name__ == "__main__":
     client = clickhouse_connect.get_client(host=HOST, port=PORT)
-    batch_size = 2
     create_table(client, TABLE_NAME)
-
+    exit()
     with open("server/RAG/data_emb_true.json", "r", encoding="utf-8") as file:
         data = json.load(file)
 
-
+    batch_size = 2
     for i in range(0, len(data), batch_size):
         append_to_clickhouse(client, TABLE_NAME, data[i : i + batch_size])

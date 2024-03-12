@@ -334,14 +334,32 @@ def clean_text(text: str) -> str:
     >>> clean_text('Пример    текста, с   лишними пробелами.')
     """
     # Заменяем нежелательные символы на пробелы
-    text = re.sub(r"[^А-Яа-яЁё \s.,!?:;-]", " ", text)
-
-    # Заменяем последовательности пробелов на одиночные пробелы
-    text = re.sub(r"\s+", " ", text)
+    text = re.sub(r"[^А-Яа-яЁё0-9 \s.,!?:;-]", " ", text)
 
     # Удаляем пробелы перед или после дефиса
     text = re.sub(r"-\s|\s-", "", text)
+    
+    # Удаляем пробелы перед знаками препинания
+    text = re.sub(r"\s+([.,!?:;-])", r"\1", text)
+    
+    # Удаляем повторяющиеся знаки препинания
+    text = re.sub(r"([.,!?:;-])([.,!?:;-])+", r"\1", text)
+    words_to_remove = [
+        "ЦЕНТРАЛЬНЫЙ БАНК",
+        "РОССИЙСКОЙ ФЕДЕРАЦИИ",
+        "БАНК РОССИИ",
+        "www.cbr.ru",
+        "495 771-91-00",
+        "8 800 300-30-00",
+        "Банк России",
+        "107016",
+        "Москва, ул. Неглинная, 12"
+    ]
+    for word in words_to_remove:
+        text = text.replace(word, "")
 
+    # Заменяем последовательности пробелов на одиночные пробелы
+    text = re.sub(r"\s+", " ", text)
     return text
 
 
@@ -416,16 +434,16 @@ def extract_text_from_pdf(pdf_path: str) -> str:
                     line_format.append(format_per_line)
                     page_content.append(line_text)
 
-                if isinstance(element, LTFigure):
-                    # Обрезаем изображение и извлекаем текст
-                    crop_image(element, page_obj)
-                    convert_pdf_to_image("cropped_image.pdf")
-                    image_text = extract_text_from_image("PDF_image.png")
-                    text_from_images.append(image_text)
-                    page_content.append(image_text)
-                    page_text.append("image")
-                    line_format.append("image")
-                    image_flag = True
+                # if isinstance(element, LTFigure):
+                #     # Обрезаем изображение и извлекаем текст
+                #     crop_image(element, page_obj)
+                #     convert_pdf_to_image("cropped_image.pdf")
+                #     image_text = extract_text_from_image("PDF_image.png")
+                #     text_from_images.append(image_text)
+                #     page_content.append(image_text)
+                #     page_text.append("image")
+                #     line_format.append("image")
+                #     image_flag = True
 
         # Сохраняем содержимое страницы в словаре
         dct_key = "Page_" + str(pagenum)
@@ -458,6 +476,7 @@ if __name__ == "__main__":
 
     new_data = []  # Список для хранения успешно обработанных данных
     bad_data = []  # Список для хранения данных с ошибками
+    so_so_data = [] 
 
     # Итерация по элементам данных
     for item in data:
@@ -469,6 +488,8 @@ if __name__ == "__main__":
             # Если текст успешно извлечен
             if item["text"] != "":
                 new_data.append(item)  # Добавляем элемент в список успешных данных
+            else:
+                so_so_data.append(item)
         except Exception as e:
             item["error"] = str(e)  # Добавляем информацию об ошибке в элемент данных
             bad_data.append(item)  # Добавляем элемент в список данных с ошибками
@@ -483,3 +504,8 @@ if __name__ == "__main__":
     # Запись данных с ошибками в файл JSON
     with open("server/RAG/data_text_false.json", "w", encoding="utf-8") as file:
         json.dump(bad_data, file, ensure_ascii=False, indent=4)
+        
+    with open("server/RAG/data_text_so_so.json", "w", encoding="utf-8") as file:
+        json.dump(so_so_data, file, ensure_ascii=False, indent=4)
+        
+    
