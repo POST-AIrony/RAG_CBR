@@ -1,14 +1,15 @@
-import json
-import re
-import PyPDF2
-from pdfminer.high_level import extract_pages
-from pdfminer.layout import LTTextContainer, LTFigure, LTComponent
-import pdfplumber
-import pytesseract
-import os
 import io
+import json
+import os
+import re
+from typing import Any, List, Tuple, Union
+
+import pdfplumber
+import PyPDF2
+import pytesseract
 from pdf2image import convert_from_bytes
-from typing import Tuple, List, Union, Any
+from pdfminer.high_level import extract_pages
+from pdfminer.layout import LTComponent, LTFigure, LTTextContainer
 
 
 def text_extraction(element: LTTextContainer) -> Tuple[str, list]:
@@ -187,11 +188,11 @@ def crop_convert_and_extract_text(element: LTComponent, page_obj: Any) -> str:
 
     # Конвертируем PDF байты в изображение PNG
     output_pdf.seek(0)
-    images = convert_from_bytes(output_pdf.getvalue(), encoding='utf-8')
+    images = convert_from_bytes(output_pdf.getvalue(), encoding="utf-8")
     image = images[0]
 
     # Извлекаем текст с изображения
-    text = pytesseract.image_to_string(image, lang="rus+eng", encoding='utf-8')
+    text = pytesseract.image_to_string(image, lang="rus+eng", encoding="utf-8")
 
     return text
 
@@ -395,9 +396,7 @@ if __name__ == "__main__":
         iteration_start_time = time.time()
         # try:
         # Извлечение текста из PDF файла
-        item["text"] = extract_text_from_pdf(
-            f'server/RAG/files2/{item.get("id")}.pdf'
-        )
+        item["text"] = extract_text_from_pdf(f'server/RAG/files2/{item.get("id")}.pdf')
         print(
             f"Успешно обработан файл {item.get('id')} Время итерации: {(time.time() - iteration_start_time):.2f} сек, Общее время: {time.time()-start_time:.2f} сек",
             end="\r",
