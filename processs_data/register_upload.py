@@ -64,3 +64,6 @@ for item in data:
     # else: print(item.get('link').split('.')[-1])
     if "zip" in item.get("link"):
         print(item)
+
+
+
