@@ -5,7 +5,6 @@ from pdfminer.high_level import extract_pages
 from pdfminer.layout import LTTextContainer, LTFigure, LTComponent
 import pdfplumber
 import pytesseract
-import os
 import io
 from pdf2image import convert_from_bytes
 from typing import Tuple, List, Union, Any
