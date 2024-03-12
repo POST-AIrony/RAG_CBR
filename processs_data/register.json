@@ -1,0 +1,758 @@
+[
+	{
+		"number": "1",
+		"date": " 12.03.2024 ",
+		"title": "Реестр паевых инвестиционных фондов",
+		"link": "https://cbr.ru/vfs/finmarkets/files/supervision/list_PIF.xlsx",
+		"id": 1
+	},
+	{
+		"number": "2",
+		"date": " 12.03.2024 ",
+		"title": "Реестр лицензий негосударственных пенсионных фондов",
+		"link": "https://cbr.ru/vfs/finmarkets/files/supervision/list_npf_Valid.xlsx",
+		"id": 2
+	},
+	{
+		"number": "3",
+		"date": " 12.03.2024 ",
+		"title": "Сведения о направлении в саморегулируемуюорганизацию предложения о представлении кандидатурыарбитражного управляющего в деле о банкротствефинансовой организации",
+		"link": "https://cbr.ru/vfs/finmarket/supervision/sv_bankrupt/inform_direction_sro.pdf",
+		"id": 3
+	},
+	{
+		"number": "4",
+		"date": " 12.03.2024 ",
+		"title": "Реестр условий выпуска и обращения сберегательныхи депозитных сертификатов кредитных организаций",
+		"link": "https://cbr.ru/vfs/analytics/registers/sert01032024.ZIP",
+		"id": 4
+	},
+	{
+		"number": "5",
+		"date": " 12.03.2024 ",
+		"title": "Списки саморегулируемых организаций арбитражныхуправляющих",
+		"link": "https://cbr.ru/vfs/finmarket/supervision/sv_bankrupt/list_bankruptcy_sro.pdf",
+		"id": 5
+	},
+	{
+		"number": "6",
+		"date": " 12.03.2024 ",
+		"title": "Списки арбитражных управляющих",
+		"link": "https://cbr.ru/vfs/finmarket/supervision/sv_bankrupt/list_bankruptcy_administrators.pdf",
+		"id": 6
+	},
+	{
+		"number": "7",
+		"date": " 12.03.2024 ",
+		"title": "Сведения о поступивших заявках на включениев Список саморегулируемых организаций арбитражныхуправляющих",
+		"link": "https://cbr.ru/vfs/finmarket/supervision/sv_bankrupt/list_bankruptcy_requests.pdf",
+		"id": 7
+	},
+	{
+		"number": "8",
+		"date": " 12.03.2024 ",
+		"title": "Сведения о поступивших заявках арбитражныхуправляющих на включение в Список арбитражныхуправляющих в деле о банкротстве финансовойорганизации",
+		"link": "https://cbr.ru/vfs/finmarket/supervision/sv_bankrupt/inform_received_arbit_managers.pdf",
+		"id": 8
+	},
+	{
+		"number": "9",
+		"date": " 12.03.2024 ",
+		"title": "Государственный реестр бюро кредитных историй",
+		"link": "https://cbr.ru/vfs/finmarkets/files/supervision/reg_bki.xlsx",
+		"id": 9
+	},
+	{
+		"number": "10",
+		"date": " 12.03.2024 ",
+		"title": "Реестр жилищных накопительных кооперативов",
+		"link": "https://cbr.ru/vfs/finmarkets/files/supervision/list_ZHNK.xlsx",
+		"id": 10
+	},
+	{
+		"number": "11",
+		"date": " 12.03.2024 ",
+		"title": "Реестр аннулированных лицензий профессиональныхучастников рынка ценных бумаг",
+		"link": "https://cbr.ru/registries/rcb/list_unlic/#a_14178",
+		"id": 11
+	},
+	{
+		"number": "12",
+		"date": " 12.03.2024 ",
+		"title": "Реестр управляющих компаний специализированныхобществ",
+		"link": "https://cbr.ru/vfs/finmarkets/files/supervision/list_ukso.xlsx",
+		"id": 12
+	},
+	{
+		"number": "13",
+		"date": " 12.03.2024 ",
+		"title": "Список доверительных управляющих",
+		"link": "https://cbr.ru/vfs/finmarkets/files/supervision/list_trust.xlsx",
+		"id": 13
+	},
+	{
+		"number": "14",
+		"date": " 12.03.2024 ",
+		"title": "Единый государственный реестр субъектов страховогодела",
+		"link": "https://cbr.ru/vfs/finmarkets/files/supervision/list_ssd.xlsx",
+		"id": 14
+	},
+	{
+		"number": "15",
+		"date": " 12.03.2024 ",
+		"title": "Государственный реестр саморегулируемых организацийактуариев",
+		"link": "https://cbr.ru/vfs/finmarkets/files/supervision/list_sro_actuarials.xlsx",
+		"id": 15
+	},
+	{
+		"number": "16",
+		"date": " 12.03.2024 ",
+		"title": "Единый реестр саморегулируемых организаций в сферефинансового рынка",
+		"link": "https://cbr.ru/vfs/finmarkets/files/supervision/list_sro.xlsx",
+		"id": 16
+	},
+	{
+		"number": "17",
+		"date": " 12.03.2024 ",
+		"title": "Реестр лицензий специализированных депозитариевинвестиционных фондов, паевых инвестиционных фондови негосударственных пенсионных фондов",
+		"link": "https://cbr.ru/vfs/finmarkets/files/supervision/list_specdepositaries.xlsx",
+		"id": 17
+	},
+	{
+		"number": "18",
+		"date": " 12.03.2024 ",
+		"title": "Государственный реестр сельскохозяйственных кредитныхпотребительских кооперативов",
+		"link": "https://cbr.ru/vfs/finmarkets/files/supervision/list_skpk.xlsx",
+		"id": 18
+	},
+	{
+		"number": "19",
+		"date": " 12.03.2024 ",
+		"title": "Список лиц, осуществляющих деятельность представителейвладельцев облигаций",
+		"link": "https://cbr.ru/vfs/finmarkets/files/supervision/list_repres_bondholders.xlsx",
+		"id": 19
+	},
+	{
+		"number": "20",
+		"date": " 12.03.2024 ",
+		"title": "Реестр лицензий репозитариев",
+		"link": "https://cbr.ru/vfs/finmarkets/files/supervision/list_repositaries.xlsx",
+		"id": 20
+	},
+	{
+		"number": "21",
+		"date": " 12.03.2024 ",
+		"title": "Список регистраторов",
+		"link": "https://cbr.ru/vfs/finmarkets/files/supervision/list_reestersavers.xlsx",
+		"id": 21
+	},
+	{
+		"number": "22",
+		"date": " 12.03.2024 ",
+		"title": "Государственный реестр ломбардов",
+		"link": "https://cbr.ru/vfs/finmarkets/files/supervision/list_PS.xlsx",
+		"id": 22
+	},
+	{
+		"number": "23",
+		"date": " 12.03.2024 ",
+		"title": "Реестр участников эксперимента по установлениюспециального регулирования в целях созданиянеобходимых условий для осуществления деятельностипо партнерскому финансированию",
+		"link": "https://cbr.ru/vfs/finmarkets/files/supervision/list_PF.xlsx",
+		"id": 23
+	},
+	{
+		"number": "24",
+		"date": " 12.03.2024 ",
+		"title": "Реестр объединений субъектов страхового дела",
+		"link": "https://cbr.ru/vfs/finmarkets/files/supervision/list_ossd.xlsx",
+		"id": 24
+	},
+	{
+		"number": "25",
+		"date": " 12.03.2024 ",
+		"title": "Реестр операторов товарных поставок",
+		"link": "https://cbr.ru/vfs/finmarkets/files/supervision/list_operator_cs.xlsx",
+		"id": 25
+	},
+	{
+		"number": "26",
+		"date": " 12.03.2024 ",
+		"title": "Реестр операторов информационных систем",
+		"link": "https://cbr.ru/vfs/finmarkets/files/supervision/list_ois.xlsx",
+		"id": 26
+	},
+	{
+		"number": "27",
+		"date": " 12.03.2024 ",
+		"title": "Государственный реестр микрофинансовых организаций",
+		"link": "https://cbr.ru/vfs/finmarkets/files/supervision/list_MFO.xlsx",
+		"id": 27
+	},
+	{
+		"number": "28",
+		"date": " 12.03.2024 ",
+		"title": "Реестр лицензий управляющих компаний инвестиционныхфондов, паевых инвестиционных фондови негосударственных пенсионных фондов",
+		"link": "https://cbr.ru/vfs/finmarkets/files/supervision/list_managementcompanies.xlsx",
+		"id": 28
+	},
+	{
+		"number": "29",
+		"date": " 12.03.2024 ",
+		"title": "Реестр кредитных рейтинговых агентств",
+		"link": "https://cbr.ru/vfs/finmarkets/files/supervision/list_kra.xlsx",
+		"id": 29
+	},
+	{
+		"number": "30",
+		"date": " 12.03.2024 ",
+		"title": "Государственный реестр кредитных потребительскихкооперативов",
+		"link": "https://cbr.ru/vfs/finmarkets/files/supervision/list_KPK_gov.xlsx",
+		"id": 30
+	},
+	{
+		"number": "31",
+		"date": " 12.03.2024 ",
+		"title": "Единый реестр инвестиционных советников",
+		"link": "https://cbr.ru/vfs/finmarkets/files/supervision/List_is.xlsx",
+		"id": 31
+	},
+	{
+		"number": "32",
+		"date": " 12.03.2024 ",
+		"title": "Реестр операторов инвестиционных платформ",
+		"link": "https://cbr.ru/vfs/finmarkets/files/supervision/list_invest_platform_op.xlsx",
+		"id": 32
+	},
+	{
+		"number": "33",
+		"date": " 12.03.2024 ",
+		"title": "Информационные агентства, аккредитованныена проведение действий по раскрытию информациио ценных бумагах и об иных финансовыхинструментах",
+		"link": "https://cbr.ru/vfs/finmarkets/files/supervision/list_information_agency.xlsx",
+		"id": 33
+	},
+	{
+		"number": "34",
+		"date": " 12.03.2024 ",
+		"title": "Реестр лицензий акционерных инвестиционных фондов",
+		"link": "https://cbr.ru/vfs/finmarkets/files/supervision/list_if.xlsx",
+		"id": 34
+	},
+	{
+		"number": "35",
+		"date": " 12.03.2024 ",
+		"title": "Реестр филиалов и представительств иностранныхкредитных рейтинговых агентств",
+		"link": "https://cbr.ru/vfs/finmarkets/files/supervision/list_fpikra.xlsx",
+		"id": 35
+	},
+	{
+		"number": "36",
+		"date": " 12.03.2024 ",
+		"title": "Список форекс-дилеров",
+		"link": "https://cbr.ru/vfs/finmarkets/files/supervision/list_forex_dealers.xlsx",
+		"id": 36
+	},
+	{
+		"number": "37",
+		"date": " 12.03.2024 ",
+		"title": "Реестр операторов иностранных платежных систем",
+		"link": "https://cbr.ru/vfs/finmarkets/files/supervision/list_foreign_ops.xlsx",
+		"id": 37
+	},
+	{
+		"number": "38",
+		"date": " 12.03.2024 ",
+		"title": "Реестр операторов финансовых платформ",
+		"link": "https://cbr.ru/vfs/finmarkets/files/supervision/list_financial_platform_op.xlsx",
+		"id": 38
+	},
+	{
+		"number": "39",
+		"date": " 12.03.2024 ",
+		"title": "Список депозитариев",
+		"link": "https://cbr.ru/vfs/finmarkets/files/supervision/list_depositaries.xlsx",
+		"id": 39
+	},
+	{
+		"number": "40",
+		"date": " 12.03.2024 ",
+		"title": "Список дилеров",
+		"link": "https://cbr.ru/vfs/finmarkets/files/supervision/list_dealers.xlsx",
+		"id": 40
+	},
+	{
+		"number": "41",
+		"date": " 12.03.2024 ",
+		"title": "Список брокеров",
+		"link": "https://cbr.ru/vfs/finmarkets/files/supervision/list_brokers.xlsx",
+		"id": 41
+	},
+	{
+		"number": "42",
+		"date": " 12.03.2024 ",
+		"title": "Реестр аудиторских организаций, оказывающих аудиторскиеуслуги общественно значимым организациямна финансовом рынке",
+		"link": "https://cbr.ru/vfs/finmarkets/files/supervision/list_aofr.xlsx",
+		"id": 42
+	},
+	{
+		"number": "43",
+		"date": " 12.03.2024 ",
+		"title": "Единый реестр ответственных актуариев",
+		"link": "https://cbr.ru/vfs/finmarkets/files/supervision/list_actuarials.xlsx",
+		"id": 43
+	},
+	{
+		"number": "44",
+		"date": " 12.03.2024 ",
+		"title": "Перечень аккредитованных организаций, осуществляющихаттестацию специалистов финансового рынка",
+		"link": "https://cbr.ru/vfs/finmarkets/files/supervision/list_Accred_org.xlsx",
+		"id": 44
+	},
+	{
+		"number": "45",
+		"date": " 12.03.2024 ",
+		"title": "Реестр финансовых организаций, обязанных организоватьвзаимодействие с уполномоченным по правампотребителей финансовых услуг",
+		"link": "https://cbr.ru/vfs/finmarkets/files/supervision/list_123_fz.xlsx",
+		"id": 45
+	},
+	{
+		"number": "46",
+		"date": " 07.03.2024 ",
+		"title": "Реестр правил доверительного управления ипотечнымпокрытием",
+		"link": "https://cbr.ru/vfs/finmarkets/files/supervision/rorrfm.xlsx",
+		"id": 46
+	},
+	{
+		"number": "47",
+		"date": " 07.03.2024 ",
+		"title": "Реестр операторов платежных систем",
+		"link": "https://cbr.ru/registries/nps/rops/#a_93114",
+		"id": 47
+	},
+	{
+		"number": "48",
+		"date": " 07.03.2024 ",
+		"title": "Реестр лицензий бирж и торговых систем",
+		"link": "https://cbr.ru/vfs/finmarkets/files/supervision/list_exchange.xlsx",
+		"id": 48
+	},
+	{
+		"number": "49",
+		"date": " 07.03.2024 ",
+		"title": "Реестр лицензий на осуществление клиринговойдеятельности",
+		"link": "https://cbr.ru/vfs/finmarkets/files/supervision/list_cliring.xlsx",
+		"id": 49
+	},
+	{
+		"number": "50",
+		"date": " 07.03.2024 ",
+		"title": "Реестр операторов по приему платежей",
+		"link": "https://cbr.ru/vfs/finmarkets/files/supervision/list_opp.xlsx",
+		"id": 50
+	},
+	{
+		"number": "51",
+		"date": " 07.03.2024 ",
+		"title": "Реестр операторов обмена цифровых финансовых активов",
+		"link": "https://cbr.ru/vfs/registries/admissionfinmarket/list_oocfa.xlsx",
+		"id": 51
+	},
+	{
+		"number": "52",
+		"date": " 07.03.2024 ",
+		"title": "Перечень аннулированных аттестатов специалистовфинансового рынка",
+		"link": "https://cbr.ru/vfs/finmarkets/files/supervision/list_Unnull_atest.xlsx",
+		"id": 52
+	},
+	{
+		"number": "53",
+		"date": " 07.03.2024 ",
+		"title": "Реестр приостановленных лицензий профессиональныхучастников рынка ценных бумаг",
+		"link": "https://cbr.ru/vfs/finmarkets/files/supervision/list_stoplicensing.xlsx",
+		"id": 53
+	},
+	{
+		"number": "54",
+		"date": " 06.03.2024 ",
+		"title": "06.03.2024",
+		"link": "https://cbr.ru/vfs/registers/mfo/list_msk_06032024.xlsx",
+		"id": 54
+	},
+	{
+		"number": "55",
+		"date": " 05.03.2024 ",
+		"title": "Информация о реестрах владельцев ценных бумаг,находящихся на обслуживании у профессиональныхучастников рынка ценных бумаг, имеющих лицензиина осуществление деятельности по ведениюреестра владельцев ценных бумаг",
+		"link": "https://cbr.ru/vfs/registries/rcb/list_issuers_reg_31122023.xlsx",
+		"id": 55
+	},
+	{
+		"number": "56",
+		"date": " 04.03.2024 ",
+		"title": "01.02.2024",
+		"link": "https://cbr.ru/vfs/credit/fzlist/fz761list-20240201.xlsx",
+		"id": 56
+	},
+	{
+		"number": "57",
+		"date": " 04.03.2024 ",
+		"title": "01.02.2024",
+		"link": "https://cbr.ru/vfs/credit/fzlist/fz454list-20240201.xlsx",
+		"id": 57
+	},
+	{
+		"number": "58",
+		"date": " 04.03.2024 ",
+		"title": "01.02.2024",
+		"link": "https://cbr.ru/vfs/credit/fzlist/fz454_2_3list-20240201.xlsx",
+		"id": 58
+	},
+	{
+		"number": "59",
+		"date": " 01.03.2024 ",
+		"title": "Перечень операторов электронных денежных средств",
+		"link": "https://cbr.ru/registries/nps/oper_zip/",
+		"id": 59
+	},
+	{
+		"number": "60",
+		"date": " 01.03.2024 ",
+		"title": "Перечень иностранных поставщиков платежных услуг",
+		"link": "https://cbr.ru/vfs/PSystem/rops/list_foreign_payment_sp.xlsx",
+		"id": 60
+	},
+	{
+		"number": "61",
+		"date": " 01.03.2024 ",
+		"title": "Перечень банковских платежных агентов, осуществляющихоперации платежных агрегаторов",
+		"link": "https://cbr.ru/vfs/PSystem/rops/list_bank_payment_agents.xlsx",
+		"id": 61
+	},
+	{
+		"number": "62",
+		"date": " 01.03.2024 ",
+		"title": "Перечень операторов услуг информационного обмена",
+		"link": "https://cbr.ru/vfs/PSystem/rops/list_info_exchange_service_op.xlsx",
+		"id": 62
+	},
+	{
+		"number": "63",
+		"date": " 01.03.2024 ",
+		"title": "Перечень поставщиков платежных приложений",
+		"link": "https://cbr.ru/vfs/PSystem/rops/list_payment_app_prov.xlsx",
+		"id": 63
+	},
+	{
+		"number": "64",
+		"date": " 29.02.2024 ",
+		"title": "Справочник ИНН и ОГРН юридических лиц",
+		"link": "https://cbr.ru/registries/rcb/inn_ogrn/#a_11703",
+		"id": 64
+	},
+	{
+		"number": "65",
+		"date": " 29.02.2024 ",
+		"title": "01.02.2024",
+		"link": "https://cbr.ru/vfs/credit/fzlist/fz1225list-20240201.xlsx",
+		"id": 65
+	},
+	{
+		"number": "66",
+		"date": " 29.02.2024 ",
+		"title": "01.02.2024",
+		"link": "https://cbr.ru/vfs/credit/fzlist/fz1080list-20240201.xlsx",
+		"id": 66
+	},
+	{
+		"number": "67",
+		"date": " 29.02.2024 ",
+		"title": "01.02.2024",
+		"link": "https://cbr.ru/vfs/credit/fzlist/fz806list-20240201.xlsx",
+		"id": 67
+	},
+	{
+		"number": "68",
+		"date": " 29.02.2024 ",
+		"title": "01.02.2024",
+		"link": "https://cbr.ru/vfs/credit/fzlist/fz806_3list-20240201.xlsx",
+		"id": 68
+	},
+	{
+		"number": "69",
+		"date": " 29.02.2024 ",
+		"title": "01.02.2024",
+		"link": "https://cbr.ru/vfs/credit/fzlist/fz751list-20240201.xlsx",
+		"id": 69
+	},
+	{
+		"number": "70",
+		"date": " 29.02.2024 ",
+		"title": "21.02.2024",
+		"link": "https://cbr.ru/vfs/credit/fzlist/fz115list-20240221.xlsx",
+		"id": 70
+	},
+	{
+		"number": "71",
+		"date": " 27.02.2024 ",
+		"title": "Реестр кредитных организаций, признанных Банком Россиизначимыми на рынке платежных услуг",
+		"link": "https://cbr.ru/registries/nps/reestr/",
+		"id": 71
+	},
+	{
+		"number": "72",
+		"date": " 27.02.2024 ",
+		"title": "Перечень микрофинансовых организацийпредпринимательского финансирования",
+		"link": "https://cbr.ru/vfs/registers/mfo/list_MFO_p_26022024.xlsx",
+		"id": 72
+	},
+	{
+		"number": "73",
+		"date": " 21.02.2024 ",
+		"title": "01.02.2024",
+		"link": "https://cbr.ru/vfs/credit/fzlist/fz1232list-20240201.xlsx",
+		"id": 73
+	},
+	{
+		"number": "74",
+		"date": " 21.02.2024 ",
+		"title": "01.02.2024",
+		"link": "https://cbr.ru/vfs/credit/fzlist/fz1121list-20240201.xlsx",
+		"id": 74
+	},
+	{
+		"number": "75",
+		"date": " 21.02.2024 ",
+		"title": "01.02.2024",
+		"link": "https://cbr.ru/vfs/credit/fzlist/fz706list-20240201.xlsx",
+		"id": 75
+	},
+	{
+		"number": "76",
+		"date": " 21.02.2024 ",
+		"title": "01.02.2024",
+		"link": "https://cbr.ru/vfs/credit/fzlist/fz697list-20240201.xlsx",
+		"id": 76
+	},
+	{
+		"number": "77",
+		"date": " 21.02.2024 ",
+		"title": "01.02.2024",
+		"link": "https://cbr.ru/vfs/credit/fzlist/fz580list-20240201.xlsx",
+		"id": 77
+	},
+	{
+		"number": "78",
+		"date": " 02.02.2024 ",
+		"title": "02.02.2024",
+		"link": "https://cbr.ru/vfs/registers/rcb/list_foreign_exch_20240202.xlsx",
+		"id": 78
+	},
+	{
+		"number": "79",
+		"date": " 02.02.2024 ",
+		"title": "02.02.2024",
+		"link": "https://cbr.ru/vfs/registers/rcb/list_foreign_org_20240202.xlsx",
+		"id": 79
+	},
+	{
+		"number": "80",
+		"date": " 31.01.2024 ",
+		"title": "01.01.2024",
+		"link": "https://cbr.ru/vfs/credit/fzlist/fz188list-20240101.xlsx",
+		"id": 80
+	},
+	{
+		"number": "81",
+		"date": " 31.01.2024 ",
+		"title": "01.01.2024",
+		"link": "https://cbr.ru/vfs/credit/fzlist/fz185_0list-20240101.xlsx",
+		"id": 81
+	},
+	{
+		"number": "82",
+		"date": " 22.01.2024 ",
+		"title": "Реестр аккредитованных Банком России представительствиностранных кредитных организаций на территорииРоссийской Федерации",
+		"link": "https://cbr.ru/vfs/registries/admissionfinmarket/rpio.xlsx",
+		"id": 82
+	},
+	{
+		"number": "83",
+		"date": " 29.12.2023 ",
+		"title": "Перечни для профессиональных участников рынка ценныхбумаг, представляющих отчетность по форме 0420416«Сведения о вложениях в выпущенные нерезидентами ценныебумаги (портфельные инвестиции)»",
+		"link": "https://cbr.ru/registries/rcb/form_0420416/#a_11695",
+		"id": 83
+	},
+	{
+		"number": "84",
+		"date": " 28.12.2023 ",
+		"title": "за 2024 г.",
+		"link": "https://cbr.ru/registries/rcb/list_f_04204219/list_f_0420421_1_quarter_2024/",
+		"id": 84
+	},
+	{
+		"number": "85",
+		"date": " 27.12.2023 ",
+		"title": "Перечни для профессиональных участников рынка ценныхбумаг, представляющих отчетность по форме 0420416«Сведения о вложениях в выпущенные нерезидентами ценныебумаги (портфельные инвестиции)»",
+		"link": "https://cbr.ru/registries/rcb/form_0420416/#a_126361",
+		"id": 85
+	},
+	{
+		"number": "86",
+		"date": " 07.06.2023 ",
+		"title": "01.05.2023",
+		"link": "https://cbr.ru/vfs/credit/fzlist/fz38list-20230501.xlsx",
+		"id": 86
+	},
+	{
+		"number": "87",
+		"date": " 29.05.2023 ",
+		"title": "01.05.2023",
+		"link": "https://cbr.ru/vfs/credit/fzlist/fz792list-20230501.xlsx",
+		"id": 87
+	},
+	{
+		"number": "88",
+		"date": " 25.05.2023 ",
+		"title": "Реестр зарегистрированных условий выдачи сберегательныхи депозитных сертификатов кредитных организаций",
+		"link": "https://cbr.ru/vfs/analytics/registers/certificates.zip",
+		"id": 88
+	},
+	{
+		"number": "89",
+		"date": " 28.09.2022 ",
+		"title": "Перечень бирж, принимающих информацию о внебиржевыхдоговорах в отношении товаров, допущенных корганизованным торгам",
+		"link": "https://cbr.ru/finmarket/supervision/sv_secur/list_commodity_exch/",
+		"id": 89
+	},
+	{
+		"number": "90",
+		"date": " 30.06.2022 ",
+		"title": "Список саморегулируемых организаций арбитражныхуправляющих, из числа членов которых долженутверждаться руководитель временной администрациифинансовой организации, являющейся кредитнымпотребительским кооперативом",
+		"link": "https://cbr.ru/Content/Document/File/85016/list_SRO_KPK.xlsx",
+		"id": 90
+	},
+	{
+		"number": "91",
+		"date": " 29.06.2022 ",
+		"title": "Список саморегулируемых организаций арбитражныхуправляющих, из числа членов которых долженутверждаться руководитель временной администрациифинансовой организации, являющейся профессиональнымучастником рынка ценных бумаг, управляющей компаниейинвестиционных фондов, паевых инвестиционных фондови негосударственных пенсионных фондов",
+		"link": "https://cbr.ru/vfs/registers/rcb/list_temp_admin_SRO.xlsx",
+		"id": 91
+	},
+	{
+		"number": "92",
+		"date": " 15.03.2022 ",
+		"title": "Список саморегулируемых организаций арбитражныхуправляющих, из числа членов которых долженутверждаться руководитель временной администрациифинансовой организации, являющейся микрофинансовойорганизацией",
+		"link": "https://cbr.ru/Content/Document/File/85015/list_SRO_MFO.xlsx",
+		"id": 92
+	},
+	{
+		"number": "93",
+		"date": " 17.01.2022 ",
+		"title": "Реестр представительств иностранных кредитныхорганизаций на территории Российской Федерации(архив)",
+		"link": "https://cbr.ru/Content/Document/File/135325/rpio_registers_archive.zip",
+		"id": 93
+	},
+	{
+		"number": "94",
+		"date": " 22.09.2021 ",
+		"title": "Сведения из реестра эмиссионных ценных бумаг",
+		"link": "https://cbr.ru/registries/rcb/ecb/",
+		"id": 94
+	},
+	{
+		"number": "95",
+		"date": " 13.08.2021 ",
+		"title": "01.12.2019",
+		"link": "https://cbr.ru/vfs/credit/fzlist/fz1396list-20191201.xls",
+		"id": 95
+	},
+	{
+		"number": "96",
+		"date": " 13.08.2021 ",
+		"title": "01.05.2019",
+		"link": "https://cbr.ru/vfs/credit/fzlist/fz218list-20190501.xls",
+		"id": 96
+	},
+	{
+		"number": "97",
+		"date": " 13.08.2021 ",
+		"title": "01.07.2017",
+		"link": "https://cbr.ru/vfs/credit/fzlist/fz214list-20170701.xls",
+		"id": 97
+	},
+	{
+		"number": "98",
+		"date": " 13.08.2021 ",
+		"title": "01.10.2017",
+		"link": "https://cbr.ru/vfs/credit/fzlist/fz185list-20171001.xls",
+		"id": 98
+	},
+	{
+		"number": "99",
+		"date": " 13.08.2021 ",
+		"title": "01.04.2018",
+		"link": "https://cbr.ru/vfs/credit/fzlist/fz000list-20180401.xls",
+		"id": 99
+	},
+	{
+		"number": "100",
+		"date": " 13.08.2021 ",
+		"title": "01.06.2018",
+		"link": "https://cbr.ru/vfs/credit/fzlist/fz213list-20180601.xls",
+		"id": 100
+	},
+	{
+		"number": "101",
+		"date": " 01.07.2021 ",
+		"title": "Реестр зарегистрированных Банком России выпусков(дополнительных выпусков) ценных бумаг кредитныхорганизаций",
+		"link": "https://cbr.ru/Content/Document/File/50923/01.07.2021_all.xlsx",
+		"id": 101
+	},
+	{
+		"number": "102",
+		"date": " 01.07.2021 ",
+		"title": "Реестр аннулированных индивидуальных номеров (кодов)дополнительных выпусков ценных бумаг кредитныхорганизаций",
+		"link": "https://cbr.ru/Content/Document/File/50926/01.07.2021_ob.xlsx",
+		"id": 102
+	},
+	{
+		"number": "104",
+		"date": " 19.02.2020 ",
+		"title": "Объявление о приеме заявок саморегулируемыхорганизаций арбитражных управляющих и арбитражныхуправляющих на включение в Списоксаморегулируемых организаций арбитражных управляющихи Список арбитражных управляющих в делео банкротстве финансовой организации",
+		"link": "https://cbr.ru/vfs/finmarket/supervision/sv_bankrupt/announcement.pdf",
+		"id": 103
+	},
+	{
+		"number": "105",
+		"date": " 16.10.2019 ",
+		"title": "Реестр аннулированных лицензий профессиональныхучастников рынка ценных бумаг",
+		"link": "https://cbr.ru/registries/rcb/list_unlic/#a_84769file",
+		"id": 104
+	},
+	{
+		"number": "106",
+		"date": " 19.06.2019 ",
+		"title": "Перечень платежных систем, с которыми осуществляетсявзаимодействие платежной системы Банка России",
+		"link": "https://cbr.ru/Content/Document/Page/92777",
+		"id": 105
+	},
+	{
+		"number": "107",
+		"date": " 01.01.2013 ",
+		"title": "Реестр общих фондов банковского управления",
+		"link": "https://cbr.ru/Content/Document/File/50925/ofbu01012013.zip",
+		"id": 106
+	},
+	{
+		"number": "108",
+		"date": " 06.12.2017 ",
+		"title": "Информация о кредитных организациях, осуществляющихфункции центрального контрагента, в отношении которыхБанком России принято решение о признании качествауправления удовлетворительным",
+		"link": "https://cbr.ru/credit/cicc/",
+		"id": 107
+	},
+	{
+		"number": "109",
+		"date": " 16.05.2017 ",
+		"title": "Реестр НПФ - участников системы гарантирования правзастрахованных лиц",
+		"link": "https://www.asv.org.ru/download/?type=document&id=154630",
+		"id": 108
+	}
+]
