@@ -1,10 +1,25 @@
 {
     "cSpell.words": [
+        "векторизации",
         "кешбэка",
+        "косинусное",
+        "Неглинная",
+        "предобработки",
+        "токенизатора",
+        "чатбот",
+        "чатбота",
+        "эмбеддинг",
+        "эмбеддингами",
         "clickhouse",
         "emeddings",
         "fastapi",
+        "fontname",
+        "mediabox",
         "ngrok",
+        "pagenum",
+        "pdfminer",
+        "pdfplumber",
+        "pytesseract",
         "Sbert"
     ]
 }

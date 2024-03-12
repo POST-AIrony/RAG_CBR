@@ -1,7 +1,8 @@
-HOST = "dafa-81-5-106-50.ngrok-free.app"
+HOST = "716c-81-5-106-50.ngrok-free.app"
 PORT = "80"
-TABLE_NAME = "SbertEmb"
+TABLE_NAME = "SbertEmbTrue"
 MODEL_EMB_NAME = "ai-forever/sbert_large_nlu_ru"
+MODEL_CHAT_NAME = "TinyLlama/TinyLlama-1.1B-Chat-v1.0"
 SYSTEM_PROMPT = """
 INSTRUCT:
 You are a helpful, respectful and honest assistant. Always answer as helpfully as possible, while being safe. Your answers should not include any harmful, unethical, racist, sexist, toxic, dangerous, or illegal content. Please ensure that your responses are socially unbiased and positive in nature.
