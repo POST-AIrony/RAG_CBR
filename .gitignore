@@ -1,6 +1,8 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 db
 files
+files2
+recovered_data
 # dependencies
 /node_modules
 /.pnp
@@ -193,3 +195,5 @@ data_text_true.json
 data_text_false.json
 cropped_image.pdf
 PDF_image.png
+server/RAG/data2.json
+server/RAG/data_xlsx.json

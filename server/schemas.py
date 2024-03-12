@@ -7,5 +7,3 @@ class ChatMessage(BaseModel):
 
 class ChatInfo(BaseModel):
     messages: list[ChatMessage]
-
-

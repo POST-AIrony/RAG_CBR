@@ -67,7 +67,6 @@ def append_to_clickhouse(client, table_name: str, data: list[dict]) -> None:
 if __name__ == "__main__":
     client = clickhouse_connect.get_client(host=HOST, port=PORT)
     create_table(client, TABLE_NAME)
-    exit()
     with open("server/RAG/data_emb_true.json", "r", encoding="utf-8") as file:
         data = json.load(file)
 
