@@ -1,6 +1,5 @@
 import clickhouse_connect
 import torch
-from scipy.spatial import distance
 from transformers import AutoModel, AutoTokenizer, pipeline, Conversation
 from typing import List, Dict
 from server.config import (
@@ -31,16 +30,13 @@ def search_results(connection, table_name: str, vector: list[float], limit: int 
     >>> vector = [0.1, 0.2, 0.3]
     >>> results = search_results(connection, 'my_table', vector, limit=5)
     """
-    # Инициализируем список результатов
     res = []
-
+    # Инициализируем список результатов
+    vector = ",".join([str(float(i)) for i in vector])
     # Выполняем запрос к базе данных
-    with connection.query(f"SELECT * FROM {table_name}").rows_stream as stream:
+    with connection.query(f"SELECT Name, Url, Date, Number, Text, cosineDistance(({vector}), Embedding) as score FROM {table_name} ORDER BY score DESC LIMIT {limit}").rows_stream as stream:
         for item in stream:
-            name, url, date, num, text, emb = item
-
-            # Вычисляем косинусное расстояние между векторами
-            dist = distance.cosine(vector, emb)
+            name, url, date, num, text, score = item
 
             # Добавляем результат в список
             res.append(
@@ -50,12 +46,9 @@ def search_results(connection, table_name: str, vector: list[float], limit: int 
                     "date": date,
                     "num": num,
                     "text": text,
-                    "dist": dist,
+                    "dist": score,
                 }
             )
-
-    # Сортируем результаты по расстоянию
-    res.sort(key=lambda x: x["dist"])
 
     # Возвращаем первые limit результатов
     return res[:limit]

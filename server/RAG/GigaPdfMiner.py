@@ -6,7 +6,7 @@ from pdfminer.layout import LTTextContainer, LTFigure, LTComponent
 import pdfplumber
 import pytesseract
 import io
-from pdf2image import convert_from_bytes
+from pdf2image import convert_from_path
 from typing import Tuple, List, Union, Any
 
 
@@ -148,7 +148,9 @@ def find_table_for_element(
     return None
 
 
-def crop_convert_and_extract_text(element: LTComponent, page_obj: Any) -> str:
+def crop_convert_and_extract_text(
+    element: LTComponent, pdf_path: str, page_num: int
+) -> str:
     """
     Обрезает изображение в PDF файле до указанного элемента, конвертирует его в изображение PNG и извлекает текст.
 
@@ -172,25 +174,14 @@ def crop_convert_and_extract_text(element: LTComponent, page_obj: Any) -> str:
         element.y1,
     )
 
-    # Устанавливаем новую область медиа-коробки (media box) для обрезки изображения
-    page_obj.mediabox.lower_left = (image_left, image_bottom)
-    page_obj.mediabox.upper_right = (image_right, image_top)
-
-    # Создаем объект для записи обрезанного изображения в байтовый поток
-    cropped_pdf_writer = PyPDF2.PdfWriter()
-    cropped_pdf_writer.add_page(page_obj)
-
-    # Создаем буфер для сохранения обрезанного изображения в формате PDF
-    output_pdf = io.BytesIO()
-    cropped_pdf_writer.write(output_pdf)
-
-    # Конвертируем PDF байты в изображение PNG
-    output_pdf.seek(0)
-    images = convert_from_bytes(output_pdf.getvalue(), encoding='utf-8')
+    images = convert_from_path(
+        pdf_path, first_page=page_num + 1, last_page=page_num + 1
+    )
     image = images[0]
+    cropped_image = image.crop((image_left, image_top, image_right, image_bottom))
 
     # Извлекаем текст с изображения
-    text = pytesseract.image_to_string(image, lang="rus+eng", encoding='utf-8')
+    text = pytesseract.image_to_string(cropped_image, lang="rus+eng")
 
     return text
 
@@ -283,6 +274,8 @@ def clean_text(text: str) -> str:
         "Банк России",
         "107016",
         "Москва, ул. Неглинная, 12",
+        "Центральный банк",
+        "Российской Федерации",
     ]
     for word in words_to_remove:
         text = text.replace(word, "")
@@ -306,15 +299,11 @@ def extract_text_from_pdf(pdf_path: str) -> str:
     >>> extract_text_from_pdf('example.pdf')
     """
     pdf = pdfplumber.open(pdf_path)
-    pdf_file = open(pdf_path, "rb")  # Открываем PDF файл
-    pdf_reader = PyPDF2.PdfReader(pdf_file)  # Читаем PDF файл
-    text_per_page = {}  # Словарь для хранения текста по страницам
+    pages_content = []
     for pagenum, page in enumerate(
         extract_pages(pdf_path)
     ):  # Итерация по страницам PDF
-        page_obj = pdf_reader.pages[pagenum]  # Объект страницы PDF
         text_from_tables = []  # Текст таблиц на странице
-        page_content = []  # Содержимое страницы
         table_in_page = -1  # Переменная для отслеживания таблиц на странице
         page_tables = pdf.pages[pagenum]  # Таблицы на странице
         tables = page_tables.find_tables()  # Находим таблицы на странице
@@ -344,7 +333,7 @@ def extract_text_from_pdf(pdf_path: str) -> str:
                 if is_element_inside_any_table(element, page, tables):
                     table_found = find_table_for_element(element, page, tables)
                     if table_found == table_in_page and table_found is not None:
-                        page_content.append(text_from_tables[table_in_page])
+                        pages_content.append(text_from_tables[table_in_page])
                         table_in_page += 1
                     continue
 
@@ -353,23 +342,15 @@ def extract_text_from_pdf(pdf_path: str) -> str:
                 if isinstance(element, LTTextContainer):
                     # Извлекаем текст из контейнера текста
                     line_text = text_extraction(element)
-                    page_content.append(line_text)
+                    pages_content.append(line_text)
 
-                if isinstance(element, LTFigure):
-                    # Обрезаем изображение и извлекаем текст
-                    image_text = crop_convert_and_extract_text(element, page_obj)
-                    page_content.append(image_text)
+                # if isinstance(element, LTFigure):
+                #     # Обрезаем изображение и извлекаем текст
+                #     image_text = crop_convert_and_extract_text(element, pdf_path, pagenum)
+                #     page_content.append(image_text)
 
-        # Сохраняем содержимое страницы в словаре
-        dct_key = "Page_" + str(pagenum)
-        text_per_page[dct_key] = [
-            text_from_tables,
-            page_content,
-        ]
-
-    pdf_file.close()  # Закрываем PDF файл
     # Объединяем текст со всех страниц и очищаем его
-    text = "".join("".join(texts[1]) for texts in text_per_page.values())
+    text = "".join("".join(page_content) for page_content in pages_content)
     text = clean_text(text)
     if not is_broken_text(text):  # Проверяем текст на целостность
         return text
@@ -381,7 +362,7 @@ if __name__ == "__main__":
     import time
 
     # Чтение данных из файла JSON
-    with open("server/RAG/data2.json", "r", encoding="utf-8") as file:
+    with open("server/RAG/data_recovered.json", "r", encoding="utf-8") as file:
         data = json.load(file)
 
     new_data = []  # Список для хранения успешно обработанных данных
@@ -392,34 +373,47 @@ if __name__ == "__main__":
     start_time = time.time()
     for item in data:
         iteration_start_time = time.time()
-        # try:
-        # Извлечение текста из PDF файла
-        item["text"] = extract_text_from_pdf(
-            f'server/RAG/files2/{item.get("id")}.pdf'
-        )
-        print(
-            f"Успешно обработан файл {item.get('id')} Время итерации: {(time.time() - iteration_start_time):.2f} сек, Общее время: {time.time()-start_time:.2f} сек",
-            end="\r",
-        )
-        # Если текст успешно извлечен
-        if item["text"] != "":
-            new_data.append(item)  # Добавляем элемент в список успешных данных
-        else:
-            so_so_data.append(item)
-        # except Exception as e:
-        # item["error"] = str(e)  # Добавляем информацию об ошибке в элемент данных
-        bad_data.append(item)  # Добавляем элемент в список данных с ошибками
-        # print(
-        #     f"Ошибка при обработке файла {item['id']}:{e} Время итерации: {iteration_start_time - start_time:.2f} сек, Общее время: {time.time()-start_time:.2f} сек'"
-        # )  # Выводим информацию об ошибке
+        try:
+            if "text" in item:
+                item["file_type"] = "text_from_site"
+                item["text"] = clean_text(item["text"])
+                if is_broken_text(item["text"]):
+                    item["text"] = ""
+            
+            else:
+            # Извлечение текста из PDF файла
+                item["text"] = extract_text_from_pdf(
+                    f'server/RAG/recovered_data/{item.get("file_name")}'
+                )
+            del item["error"] # Удаляем поле error
+
+            # Если текст успешно извлечен
+            if item["text"] != "":
+                print(
+                    f"Успешно обработан файл {item.get('id')} Время итерации: {(time.time() - iteration_start_time):.2f} сек, Общее время: {time.time()-start_time:.2f} сек",
+                    end="\r",
+                )
+                new_data.append(item)  # Добавляем элемент в список успешных данных
+            else:
+                print(
+                    f"Плохой файл {item.get('id')} Время итерации: {(time.time() - iteration_start_time):.2f} сек, Общее время: {time.time()-start_time:.2f} сек",
+                    end="\r",
+                )
+                so_so_data.append(item)
+        except Exception as e:
+            item["error"] = str(e)  # Добавляем информацию об ошибке в элемент данных
+            bad_data.append(item)  # Добавляем элемент в список данных с ошибками
+            print(
+                f"Ошибка при обработке файла {item['id']}:{e} Время итерации: {iteration_start_time - start_time:.2f} сек, Общее время: {time.time()-start_time:.2f} сек'"
+            )  # Выводим информацию об ошибке
 
     # Запись успешно обработанных данных в файл JSON
-    with open("server/RAG/data_text_true2.json", "w", encoding="utf-8") as file:
+    with open("server/RAG/data_text_true_recovered.json", "w", encoding="utf-8") as file:
         json.dump(new_data, file, ensure_ascii=False, indent=4)
 
     # Запись данных с ошибками в файл JSON
-    with open("server/RAG/data_text_false2.json", "w", encoding="utf-8") as file:
+    with open("server/RAG/data_text_false_recovered.json", "w", encoding="utf-8") as file:
         json.dump(bad_data, file, ensure_ascii=False, indent=4)
 
-    with open("server/RAG/data_text_so_so2.json", "w", encoding="utf-8") as file:
+    with open("server/RAG/data_text_so_so_recovered.json", "w", encoding="utf-8") as file:
         json.dump(so_so_data, file, ensure_ascii=False, indent=4)

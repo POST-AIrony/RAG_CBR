@@ -56,7 +56,7 @@ def append_to_clickhouse(client, table_name: str, data: list[dict]) -> None:
     # Формируем строку значений для запроса INSERT
     values = ""
     for item in data:
-        values += f"('{item['title']}','{item['link']}','{item['date']}','{item['number']}','{item['text']}','[{item['emeddings']}]'),"
+        values += f"('{item['title']}','{item['link']}','{item['date']}','{item['number']}','{item['text']}','({item['emeddings']})'),"
 
     # Формируем запрос INSERT
     query = f"""INSERT INTO "{table_name}"("Name","Url","Date","Number", "Text", "Embedding") VALUES {values[:-1]}"""
