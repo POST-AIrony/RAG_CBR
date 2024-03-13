@@ -197,3 +197,12 @@ cropped_image.pdf
 PDF_image.png
 server/RAG/data2.json
 server/RAG/data_xlsx.json
+server/RAG/data_recovered.json
+server/RAG/data_text_false_full.json
+server/RAG/data_text_false_recovered.json
+server/RAG/data_text_false2.json
+server/RAG/data_text_so_so_recovered.json
+server/RAG/data_text_so_so2.json
+server/RAG/data_text_true_full.json
+server/RAG/data_text_true_recovered.json
+server/RAG/data_text_true2.json
