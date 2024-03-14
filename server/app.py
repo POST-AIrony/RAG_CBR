@@ -62,7 +62,7 @@ async def create_row(
     file_type: str,
     url: str,
     chunk_type: str,
-    table_name: str,
+    table_name: str = "Data",
 ):
     """Создание записи в базе"""
     embedding = utilities.txt2embeddings(

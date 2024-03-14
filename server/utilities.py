@@ -1,15 +1,16 @@
+from typing import Dict, List, Union
+
 import clickhouse_connect
 import torch
-from transformers import AutoModel, AutoTokenizer, pipeline, Conversation
-from typing import List, Dict, Union
 from config import (
-    TABLE_NAME,
     HOST,
-    PORT,
-    MODEL_EMB_NAME,
     MODEL_CHAT_NAME,
+    MODEL_EMB_NAME,
+    PORT,
     SYSTEM_PROMPT,
+    TABLE_NAME,
 )
+from transformers import AutoModel, AutoTokenizer, Conversation, pipeline
 
 
 def search_results(connection, table_name: str, vector: list[float], limit: int = 5):
@@ -34,7 +35,9 @@ def search_results(connection, table_name: str, vector: list[float], limit: int 
     # Инициализируем список результатов
     vector = ",".join([str(float(i)) for i in vector])
     # Выполняем запрос к базе данных
-    with connection.query(f"SELECT Name, Url, Date, Number, Text, cosineDistance(({vector}), Embedding) as score FROM {table_name} ORDER BY score DESC LIMIT {limit}").rows_stream as stream:
+    with connection.query(
+        f"SELECT Name, Url, Date, Number, Text, cosineDistance(({vector}), Embedding) as score FROM {table_name} ORDER BY score DESC LIMIT {limit}"
+    ).rows_stream as stream:
         for item in stream:
             name, url, date, num, text, score = item
 
@@ -88,7 +91,9 @@ def mean_pooling(model_output: tuple, attention_mask: torch.Tensor) -> torch.Ten
     return sum_embeddings / sum_mask
 
 
-def txt2embeddings(text: Union[str, List[str]], tokenizer, model, device: str = "cpu") -> torch.Tensor:
+def txt2embeddings(
+    text: Union[str, List[str]], tokenizer, model, device: str = "cpu"
+) -> torch.Tensor:
     """
     Преобразует текст в его векторное представление с использованием модели transformer.
 
@@ -226,8 +231,10 @@ def load_models(model: str, device: str = "cpu", torch_dtype: str = "auto") -> t
     >>> tokenizer, model = load_models("ai-forever/sbert_large_nlu_ru")
     """
     # Загружаем токенизатор для модели
-    tokenizer = AutoTokenizer.from_pretrained(model, device_map=device, torch_dtype=torch_dtype)
-    
+    tokenizer = AutoTokenizer.from_pretrained(
+        model, device_map=device, torch_dtype=torch_dtype
+    )
+
     # Загружаем модель
     model = AutoModel.from_pretrained(model, device_map=device, torch_dtype=torch_dtype)
 
