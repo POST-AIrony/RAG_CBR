@@ -1,13 +1,14 @@
+import io
 import json
 import re
-import PyPDF2
-from pdfminer.high_level import extract_pages
-from pdfminer.layout import LTTextContainer, LTFigure, LTComponent
+from typing import Any, List, Tuple, Union
+
 import pdfplumber
+import PyPDF2
 import pytesseract
-import io
 from pdf2image import convert_from_path
-from typing import Tuple, List, Union, Any
+from pdfminer.high_level import extract_pages
+from pdfminer.layout import LTComponent, LTFigure, LTTextContainer
 
 
 def text_extraction(element: LTTextContainer) -> Tuple[str, list]:
@@ -379,13 +380,13 @@ if __name__ == "__main__":
                 item["text"] = clean_text(item["text"])
                 if is_broken_text(item["text"]):
                     item["text"] = ""
-            
+
             else:
-            # Извлечение текста из PDF файла
+                # Извлечение текста из PDF файла
                 item["text"] = extract_text_from_pdf(
                     f'server/RAG/recovered_data/{item.get("file_name")}'
                 )
-            del item["error"] # Удаляем поле error
+            del item["error"]  # Удаляем поле error
 
             # Если текст успешно извлечен
             if item["text"] != "":
