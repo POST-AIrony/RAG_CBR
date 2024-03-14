@@ -53,14 +53,33 @@ async def new_message(chat: ChatInfo, k: int = 10):
     }
 
 
+def json2sql(data: dict, table_name: str):
+
+    return [
+        f"""INSERT INTO "{table_name}"("Text","Number","Date","Title","FileType","Url","ChunkType", "Embedding") VALUES('{item.get('page_content')}', '{item.get('number')}', '{item.get('date')}', '{item.get('title')}', '{item.get('file_type')}', '{item.get('url')}', '{item.get('chunk_type')}', ({item.get("emeddings")}))"""
+        for item in data
+    ]
+
+
 @app.post("/append-row")
-async def create_row(name: str, url: str, date: str, num: str, text: str):
+async def create_row(
+    page_content: str,
+    number: str,
+    date: str,
+    title: str,
+    file_type: str,
+    url: str,
+    chunk_type: str,
+    table_name: str,
+):
     """Создание записи в базе"""
-    embedding = utilities.txt2embeddings(text, app.state.model, app.state.tokenizer)[0]
-    vectors = ",".join([str(float(i)) for i in embedding])
-    values = f"('{name}','{url}','{date}','{num}','{text}','[{vectors}]'),"
-    query = f"""INSERT INTO "{TABLE_NAME}"("Name","Url","Date","Number", "Text", "Embedding") VALUES {values}"""
-    client.command(query)
+    embedding = utilities.txt2embeddings(
+        page_content, app.state.model, app.state.tokenizer
+    )[0]
+
+    client.command(
+        f"""INSERT INTO "{table_name}"("Text","Number","Date","Title","FileType","Url","ChunkType", "Embedding") VALUES('{page_content}', '{number}', '{date}', '{title}', '{file_type}', '{url}', '{chunk_type}', ({embedding}))"""
+    )
 
 
 @app.get("/", response_class=HTMLResponse)
