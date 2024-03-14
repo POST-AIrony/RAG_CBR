@@ -206,3 +206,10 @@ server/RAG/data_text_so_so2.json
 server/RAG/data_text_true_full.json
 server/RAG/data_text_true_recovered.json
 server/RAG/data_text_true2.json
+continue.json
+data_text_chunked_embedded.json
+data_text_chunked_rec.json
+data_text_chunked.json
+saved.json
+test.json
+.vscode/settings.json

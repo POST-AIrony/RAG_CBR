@@ -1,0 +1,420 @@
+[33mcommit 118e61f38b0c9cf293778d02ee0b89fbfdd5a756[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: RebelRaider <leonid.chesnikov@gmail.com>
+Date:   Wed Mar 13 16:33:37 2024 +0300
+
+    к прошлому коммиту
+
+[33mcommit 5e04d461f98ffbfa2992974bf2ac8e548844ae5a[m
+Author: RebelRaider <leonid.chesnikov@gmail.com>
+Date:   Wed Mar 13 16:33:21 2024 +0300
+
+    commit +100 к скорости парсера пдф, завершена работа над субчанками
+
+[33mcommit 6953bf62df3e31309398bbe5bcca9144395bcb6c[m
+Author: allelleo <dev.allelleo@internet.ru>
+Date:   Wed Mar 13 14:15:40 2024 +0300
+
+    вставка данных
+
+[33mcommit 78cfdab6adee6997f543c2eed6a61320915711e3[m
+Merge: 01ed2bc 920e74e
+Author: RebelRaider <leonid.chesnikov@gmail.com>
+Date:   Wed Mar 13 00:24:44 2024 +0300
+
+    Merge branch 'main' of https://github.com/POST-AIrony/PurpleHack2024
+
+[33mcommit 01ed2bc505b83120a61f3dcb2fb33cd47cc29305[m
+Author: RebelRaider <leonid.chesnikov@gmail.com>
+Date:   Wed Mar 13 00:23:11 2024 +0300
+
+    GigaParserUpdate
+
+[33mcommit 920e74ea365ce24f599080a3e789c5b40d792ae5[m
+Author: allelleo <dev.allelleo@internet.ru>
+Date:   Wed Mar 13 00:21:48 2024 +0300
+
+    delete front AHAHHA
+
+[33mcommit 77bcb2bafa382f5c81ac8a05a6fb47fff4602c7e[m
+Author: allelleo <dev.allelleo@internet.ru>
+Date:   Wed Mar 13 00:20:59 2024 +0300
+
+    delete
+
+[33mcommit c3a4b5d5cbf6d5ddbb608256fe163447ce15fd2b[m
+Author: allelleo <dev.allelleo@internet.ru>
+Date:   Wed Mar 13 00:19:56 2024 +0300
+
+    delete fronend hahahhaa
+
+[33mcommit 879aed96374a64a650ef6a7a8f04afe98f609c47[m
+Author: allelleo <dev.allelleo@internet.ru>
+Date:   Wed Mar 13 00:19:03 2024 +0300
+
+    cos dis query
+
+[33mcommit f696237bb0c9191843c124bba33b4ff72e98431c[m
+Author: allelleo <dev.allelleo@internet.ru>
+Date:   Wed Mar 13 00:02:22 2024 +0300
+
+    commit
+
+[33mcommit ca5e7133904a4e6840820f0235e9f1b25110ab9f[m
+Author: RebelRaider <leonid.chesnikov@gmail.com>
+Date:   Wed Mar 13 00:01:21 2024 +0300
+
+    better PDFparser
+
+[33mcommit 74cb36981eac7e47aa257a830758487c8c95c7d1[m
+Author: RebelRaider <leonid.chesnikov@gmail.com>
+Date:   Tue Mar 12 22:08:46 2024 +0300
+
+    fuhhhhhh
+
+[33mcommit c504a0392f218fb284df5e014e17664fca6a2952[m
+Author: allelleo <dev.allelleo@internet.ru>
+Date:   Tue Mar 12 21:14:53 2024 +0300
+
+    lalala
+
+[33mcommit 7fdb6ab9ac5803af94ade77f2073d4b1eb6cedaf[m
+Author: RebelRaider <leonid.chesnikov@gmail.com>
+Date:   Tue Mar 12 10:54:35 2024 +0300
+
+    refactor project
+
+[33mcommit 7e3f16506d1ff2d62532efa27df2a3d54453f1b3[m
+Author: RebelRaider <leonid.chesnikov@gmail.com>
+Date:   Mon Mar 11 20:11:27 2024 +0300
+
+    осталось отполировать, это фулл сервис
+
+[33mcommit ad6d89a51b453966bcbc6f8017a020bd5268b45b[m
+Author: RebelRaider <leonid.chesnikov@gmail.com>
+Date:   Mon Mar 11 18:07:11 2024 +0300
+
+    Ещё конфиги
+
+[33mcommit 38af8d122a3fb89359960ba3fb11ebe4a4ac0d6b[m
+Author: RebelRaider <leonid.chesnikov@gmail.com>
+Date:   Mon Mar 11 15:06:37 2024 +0300
+
+    добавлены пайплайны
+
+[33mcommit cd50055dee68e0534bf87abea7af3c3c279450a6[m
+Author: Boris Karabut <93115460+RoastedPikachu@users.noreply.github.com>
+Date:   Mon Mar 11 14:42:36 2024 +0300
+
+    Delete frontend/node_modules directory
+
+[33mcommit 8fcd7f84377a487c2171a086c4d5af6d87dbdc6f[m
+Author: Boris Karabut <boriskarabytwork@gmail.com>
+Date:   Mon Mar 11 14:40:15 2024 +0300
+
+    Накидал тестовую фверсию фронта v0.8
+
+[33mcommit e6c2e6a25f539b0da5e197fea312410d0c15e5f7[m
+Author: RebelRaider <leonid.chesnikov@gmail.com>
+Date:   Mon Mar 11 04:58:00 2024 +0300
+
+    подправлены параметры и инференс
+
+[33mcommit ac071befce5eab99138f0f2b4ce5332ce31b1ed5[m
+Author: RebelRaider <leonid.chesnikov@gmail.com>
+Date:   Mon Mar 11 02:27:39 2024 +0300
+
+    Чистый датасет!!!
+
+[33mcommit a9f45efbc83f34aab19b0fe0c17cd5e9e7d39ed7[m
+Author: allelleo <dev.allelleo@internet.ru>
+Date:   Mon Mar 11 01:23:55 2024 +0300
+
+    и другие буквы
+
+[33mcommit f17e8ca0c0f3833fe25750a99f957f606b2098e3[m
+Author: allelleo <dev.allelleo@internet.ru>
+Date:   Mon Mar 11 01:23:40 2024 +0300
+
+    абвгдеёжс
+
+[33mcommit 1c7f4321274fde6e41de17314ccc7b97ba173f34[m
+Author: allelleo <dev.allelleo@internet.ru>
+Date:   Mon Mar 11 01:21:54 2024 +0300
+
+    add create row to db
+
+[33mcommit ec8f6c3ef4b11d97eb24c502c69ab742c052007e[m
+Author: allelleo <dev.allelleo@internet.ru>
+Date:   Sun Mar 10 23:42:09 2024 +0300
+
+    server logic
+
+[33mcommit 71d3b3adbff6551dd3375705cba59bdbc940e3fd[m
+Author: RebelRaider <leonid.chesnikov@gmail.com>
+Date:   Sun Mar 10 23:29:19 2024 +0300
+
+    Работа Лёше
+
+[33mcommit 932cfbe4ade366d0e3289458713a99b0b312c611[m
+Merge: 952fd1c 1e8270b
+Author: allelleo <dev.allelleo@internet.ru>
+Date:   Sun Mar 10 21:57:54 2024 +0300
+
+    Merge branch 'main' of https://github.com/POST-AIrony/PurpleHack2024
+
+[33mcommit 952fd1c1b4b49ba4273fad8b1e0f6a7439f02dc9[m
+Author: allelleo <dev.allelleo@internet.ru>
+Date:   Sun Mar 10 21:57:52 2024 +0300
+
+    update
+
+[33mcommit 1e8270b30fd7298b63e172ce07f07ad52b884aa6[m
+Author: Leonid Chesnikov <98324451+RebelRaider@users.noreply.github.com>
+Date:   Sun Mar 10 21:56:15 2024 +0300
+
+    Delete server/RAG/data.json
+
+[33mcommit b88d284d11cce94b2f71792a9fdfbf2dfedadea9[m
+Merge: 6c0b9d1 f64de0d
+Author: allelleo <dev.allelleo@internet.ru>
+Date:   Sun Mar 10 21:54:26 2024 +0300
+
+    Merge branch 'main' of https://github.com/POST-AIrony/PurpleHack2024
+
+[33mcommit 6c0b9d11acb42004a9b65a7074b3c5e1f0309756[m
+Author: allelleo <dev.allelleo@internet.ru>
+Date:   Sun Mar 10 21:54:15 2024 +0300
+
+    fix bug
+
+[33mcommit f64de0d947b4246cf0b449cf6994d533669f5747[m
+Author: RebelRaider <leonid.chesnikov@gmail.com>
+Date:   Sun Mar 10 21:51:47 2024 +0300
+
+    good news! ml and db are ready
+
+[33mcommit f4349f8d37411040955b70cbefcbd3418c5b8a78[m
+Author: allelleo <dev.allelleo@internet.ru>
+Date:   Sun Mar 10 21:45:27 2024 +0300
+
+    connection
+
+[33mcommit 6687917cdf2433b98947ca2b5b624e1e056d2adb[m
+Author: RebelRaider <leonid.chesnikov@gmail.com>
+Date:   Sun Mar 10 01:33:58 2024 +0300
+
+    minor changes
+
+[33mcommit 6490df23394bd1c25981bc3e4e763753c9e2d5da[m
+Author: RebelRaider <leonid.chesnikov@gmail.com>
+Date:   Sun Mar 10 01:32:59 2024 +0300
+
+    отправка векторов в бд
+
+[33mcommit 68254c4fa7bcd27657ebcf94776d0c2b451e2f84[m
+Author: allelleo <dev.allelleo@internet.ru>
+Date:   Sun Mar 10 01:28:40 2024 +0300
+
+    search_result func
+
+[33mcommit 7e5af2fcf1a22cd861807beb17712af453d8a808[m
+Merge: 077a77e 5b7c59e
+Author: allelleo <dev.allelleo@internet.ru>
+Date:   Sun Mar 10 00:52:32 2024 +0300
+
+    Merge branch 'main' of https://github.com/POST-AIrony/PurpleHack2024
+
+[33mcommit 077a77ec857bf3ccc7bcd0632855df2f2a21d035[m
+Author: allelleo <dev.allelleo@internet.ru>
+Date:   Sun Mar 10 00:52:21 2024 +0300
+
+    cos distance logic
+
+[33mcommit 5b7c59e584b003c30d2ad03905c14914d4c656ba[m
+Author: RebelRaider <leonid.chesnikov@gmail.com>
+Date:   Sat Mar 9 21:14:50 2024 +0300
+
+    commit тестирование моделей прошло успешно
+
+[33mcommit 09fe339ab8d4c1389d815427b9e90fcbd84c1729[m
+Author: allelleo <dev.allelleo@internet.ru>
+Date:   Sat Mar 9 21:01:48 2024 +0300
+
+    delete
+
+[33mcommit 3dd84d0245608ed7ca9525736fa0187d06161e68[m
+Merge: 7e87696 672d977
+Author: allelleo <dev.allelleo@internet.ru>
+Date:   Sat Mar 9 21:01:23 2024 +0300
+
+    Merge branch 'main' of https://github.com/POST-AIrony/PurpleHack2024
+
+[33mcommit 7e876965f36786da12d1e41fae4c7dc3b216ef53[m
+Author: allelleo <dev.allelleo@internet.ru>
+Date:   Sat Mar 9 21:01:08 2024 +0300
+
+    commit
+
+[33mcommit 672d977aa2dee3d52a941fa5d65bf1b452b79a9f[m
+Author: Boris Karabut <boriskarabytwork@gmail.com>
+Date:   Fri Mar 8 23:47:13 2024 +0300
+
+    Сделаем вид что тут был мердж ........................................................................
+
+[33mcommit a192e2397f6ca88ddc7b6763f2d8670ca100b4b8[m
+Author: Boris Karabut <boriskarabytwork@gmail.com>
+Date:   Fri Mar 8 23:42:49 2024 +0300
+
+    Удалил файлы во избежании конфликта при мердже
+
+[33mcommit c61580bbd24e01d4bb70af86b6fa0f98397b3bfd[m
+Merge: 73491b2 fb4a04d
+Author: Boris Karabut <boriskarabytwork@gmail.com>
+Date:   Fri Mar 8 23:42:17 2024 +0300
+
+    Merge branch 'frontend' of https://github.com/POST-AIrony/PurpleHack2024 into frontend
+
+[33mcommit 73491b28b36f5ad6f46af4e88d5847363c045934[m
+Author: Boris Karabut <boriskarabytwork@gmail.com>
+Date:   Fri Mar 8 23:41:20 2024 +0300
+
+    Добавил папочку для будущего мерджа
+
+[33mcommit fb4a04d9ee810da5dfd234fbe3d4570f8af834fd[m[33m ([m[1;31morigin/frontend[m[33m)[m
+Author: Boris Karabut <boriskarabytwork@gmail.com>
+Date:   Fri Mar 8 23:27:01 2024 +0300
+
+    Удалил лишнее
+
+[33mcommit 957be33e98885de3e3ee8e91709a8068d85d61a9[m
+Merge: 422cad9 f157a5f
+Author: Boris Karabut <boriskarabytwork@gmail.com>
+Date:   Fri Mar 8 23:25:49 2024 +0300
+
+    Фикс конфликта
+
+[33mcommit f157a5f1998143cddc165805240518768832961a[m
+Author: Boris Karabut <93115460+RoastedPikachu@users.noreply.github.com>
+Date:   Fri Mar 8 23:00:25 2024 +0300
+
+    Delete README.md
+
+[33mcommit b9e31010ed79f1353757933247ceeff9b4641d0f[m
+Author: Boris Karabut <93115460+RoastedPikachu@users.noreply.github.com>
+Date:   Fri Mar 8 23:00:14 2024 +0300
+
+    Delete LICENSE
+
+[33mcommit f9198890da926fd8c81581b0aac9e639dfdcbf02[m
+Author: Boris Karabut <93115460+RoastedPikachu@users.noreply.github.com>
+Date:   Fri Mar 8 22:59:05 2024 +0300
+
+    Delete .gitignore
+
+[33mcommit 78789ecf73c4ddf2150ef2068d103dab6f2b2a2b[m
+Author: Boris Karabut <93115460+RoastedPikachu@users.noreply.github.com>
+Date:   Fri Mar 8 22:58:54 2024 +0300
+
+    Delete .idea directory
+
+[33mcommit 7effc993b8dcef9f4a8a0934139d02a27108911c[m
+Author: Boris Karabut <boriskarabytwork@gmail.com>
+Date:   Fri Mar 8 22:57:57 2024 +0300
+
+    Переинициализация проекта
+
+[33mcommit 12eda9c21924b2e7caf580d9c9d89ea6561189c6[m
+Author: Boris Karabut <boriskarabytwork@gmail.com>
+Date:   Fri Mar 8 22:57:37 2024 +0300
+
+    Установил axios и tailwind либы
+
+[33mcommit 422cad953397374867bc5bd5dd85c6ea554d93a5[m
+Author: RebelRaider <leonid.chesnikov@gmail.com>
+Date:   Fri Mar 8 00:14:50 2024 +0300
+
+    Лёша не грамотный
+
+[33mcommit bf4a7879e9ba0a194ddf18fdd38854462f8a8053[m
+Author: allelleo <dev.allelleo@internet.ru>
+Date:   Fri Mar 8 00:04:08 2024 +0300
+
+    fixbug
+
+[33mcommit 076ab6b9e5809ddc2a0e43b0499ca12eb24cf704[m
+Author: allelleo <dev.allelleo@internet.ru>
+Date:   Thu Mar 7 23:36:19 2024 +0300
+
+    f#cking pg vectors
+
+[33mcommit 4571859f6c5abab894acc56716f0510aaa357b97[m
+Author: allelleo <dev.allelleo@internet.ru>
+Date:   Thu Mar 7 22:24:52 2024 +0300
+
+    add index func
+
+[33mcommit 747af248ca347478fd85ded4741b6027d5f352b6[m
+Author: allelleo <dev.allelleo@internet.ru>
+Date:   Thu Mar 7 22:17:02 2024 +0300
+
+    add controllers
+
+[33mcommit e19a1c6bbbd91261af001aa0bd29b7b3241676bc[m
+Author: allelleo <dev.allelleo@internet.ru>
+Date:   Thu Mar 7 22:04:19 2024 +0300
+
+    fronend and static folders
+
+[33mcommit dd57501f8f22426fdf6901ebfc6a467c4870df28[m
+Author: allelleo <dev.allelleo@internet.ru>
+Date:   Thu Mar 7 22:02:58 2024 +0300
+
+    update
+
+[33mcommit a6a690d6db7f5d15f9d07cbbf2101b192b3eb8e2[m
+Author: allelleo <dev.allelleo@internet.ru>
+Date:   Thu Mar 7 22:02:10 2024 +0300
+
+    update readme
+
+[33mcommit ba7bb5e24e73f6f6c875d955666b964cf5e88851[m
+Author: allelleo <dev.allelleo@internet.ru>
+Date:   Thu Mar 7 22:01:13 2024 +0300
+
+    license readme
+
+[33mcommit f2d14c0e4e4931bb009e3a272be46640982ff870[m
+Author: allelleo <dev.allelleo@internet.ru>
+Date:   Thu Mar 7 22:00:27 2024 +0300
+
+    init commit
+
+[33mcommit fbbeb0c795fda40ac037b999f6c945a7d8b31fa2[m
+Author: Alexey Ovchinnikov <119781637+allelleo@users.noreply.github.com>
+Date:   Thu Mar 7 21:54:04 2024 +0300
+
+    Delete README.md
+
+[33mcommit e4f0888ab21733b1d9ad84ee07914042764d88f1[m
+Author: Alexey Ovchinnikov <119781637+allelleo@users.noreply.github.com>
+Date:   Thu Mar 7 21:53:59 2024 +0300
+
+    Delete LICENSE
+
+[33mcommit 5f6ac46b27600eb11a87795c976e489eeffe4e47[m
+Author: Alexey Ovchinnikov <119781637+allelleo@users.noreply.github.com>
+Date:   Thu Mar 7 21:53:52 2024 +0300
+
+    Delete .gitignore
+
+[33mcommit b9d5805c222e7451c6f830dc0b309d6413cb627e[m
+Author: Boris Karabut <boriskarabytwork@gmail.com>
+Date:   Wed Mar 6 18:52:36 2024 +0300
+
+    Поменял readme :)
+
+[33mcommit 5e730ce838735d82e83eddee0529db3bf0c6d5fb[m
+Author: Leonid Chesnikov <98324451+RebelRaider@users.noreply.github.com>
+Date:   Wed Mar 6 14:55:18 2024 +0300
+
+    Initial commit

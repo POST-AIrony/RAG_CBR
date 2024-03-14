@@ -1,8 +1,8 @@
 import clickhouse_connect
 import torch
 from transformers import AutoModel, AutoTokenizer, pipeline, Conversation
-from typing import List, Dict
-from server.config import (
+from typing import List, Dict, Union
+from config import (
     TABLE_NAME,
     HOST,
     PORT,
@@ -88,7 +88,7 @@ def mean_pooling(model_output: tuple, attention_mask: torch.Tensor) -> torch.Ten
     return sum_embeddings / sum_mask
 
 
-def txt2embeddings(text: str, tokenizer, model, device: str = "cpu") -> torch.Tensor:
+def txt2embeddings(text: Union[str, List[str]], tokenizer, model, device: str = "cpu") -> torch.Tensor:
     """
     Преобразует текст в его векторное представление с использованием модели transformer.
 
@@ -108,8 +108,10 @@ def txt2embeddings(text: str, tokenizer, model, device: str = "cpu") -> torch.Te
     >>> embeddings = txt2embeddings(text, tokenizer, model, device="cuda")
     """
     # Кодируем входной текст с помощью токенизатора
+    if isinstance(text, str):
+        text = [text]
     encoded_input = tokenizer(
-        [text],
+        text,
         padding=True,
         truncation=True,
         return_tensors="pt",
@@ -210,7 +212,7 @@ def generate_answer(chatbot, chat: List[Dict[str, str]], document: str) -> str:
     return conversation[-1]
 
 
-def load_models(model: str) -> tuple:
+def load_models(model: str, device: str = "cpu", torch_dtype: str = "auto") -> tuple:
     """
     Загружает токенизатор и модель для указанной предобученной модели.
 
@@ -224,10 +226,10 @@ def load_models(model: str) -> tuple:
     >>> tokenizer, model = load_models("ai-forever/sbert_large_nlu_ru")
     """
     # Загружаем токенизатор для модели
-    tokenizer = AutoTokenizer.from_pretrained(model)
-
+    tokenizer = AutoTokenizer.from_pretrained(model, device_map=device, torch_dtype=torch_dtype)
+    
     # Загружаем модель
-    model = AutoModel.from_pretrained(model)
+    model = AutoModel.from_pretrained(model, device_map=device, torch_dtype=torch_dtype)
 
     return tokenizer, model
 

@@ -409,11 +409,11 @@ if __name__ == "__main__":
 
     # Запись успешно обработанных данных в файл JSON
     with open("server/RAG/data_text_true_recovered.json", "w", encoding="utf-8") as file:
-        json.dump(new_data, file, ensure_ascii=False, indent=4)
+        json.dump(new_data, file, ensure_ascii=False, indent=1)
 
     # Запись данных с ошибками в файл JSON
     with open("server/RAG/data_text_false_recovered.json", "w", encoding="utf-8") as file:
-        json.dump(bad_data, file, ensure_ascii=False, indent=4)
+        json.dump(bad_data, file, ensure_ascii=False, indent=1)
 
     with open("server/RAG/data_text_so_so_recovered.json", "w", encoding="utf-8") as file:
-        json.dump(so_so_data, file, ensure_ascii=False, indent=4)
+        json.dump(so_so_data, file, ensure_ascii=False, indent=1)

@@ -1,6 +1,5 @@
 from __future__ import annotations
 from typing import Any, Sequence
-from typing_extensions import ParamSpec
 import copy
 import logging
 from dataclasses import dataclass
@@ -11,7 +10,6 @@ from typing import (
     List,
     Optional,
     Sequence,
-    TypeVar,
     cast,
 )
 from TextTypes import Document
@@ -19,9 +17,6 @@ import re
 from typing import Any, List, Optional
 
 logger = logging.getLogger(__name__)
-
-P = ParamSpec("P")
-T = TypeVar("T")
 
 
 @dataclass(frozen=True)
@@ -35,6 +30,7 @@ class Tokenizer:
         decode (Callable[[List[int]], str]): Функция декодирования списка токенов в строку.
         encode (Callable[[str], List[int]]): Функция кодирования строки в список токенов.
     """
+
     chunk_overlap: int
     tokens_per_chunk: int
     decode: Callable[[List[int]], str]
@@ -580,21 +576,3 @@ class RecursiveChunker:
             List[str]: Список частей текста.
         """
         return self._split_text(text, self._separators)
-
-
-if __name__ == "__main__":
-    import json
-
-    text_splitter = SentenceChunker()
-    with open("server/RAG/data_text_true.json", "r", encoding="utf-8") as file:
-        data = json.load(file)
-    text = []
-    metadata = []
-    for i, item in enumerate(data):
-        text.append(item.pop("text"))
-        metadata.append(item)
-        if i == 1000:
-            break
-    docs = text_splitter.create_documents(text, metadata)
-    chunking = text_splitter.split_documents(docs)
-    print(len(chunking))
