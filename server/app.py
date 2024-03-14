@@ -53,14 +53,6 @@ async def new_message(chat: ChatInfo, k: int = 10):
     }
 
 
-def json2sql(data: dict, table_name: str):
-
-    return [
-        f"""INSERT INTO "{table_name}"("Text","Number","Date","Title","FileType","Url","ChunkType", "Embedding") VALUES('{item.get('page_content')}', '{item.get('number')}', '{item.get('date')}', '{item.get('title')}', '{item.get('file_type')}', '{item.get('url')}', '{item.get('chunk_type')}', ({item.get("emeddings")}))"""
-        for item in data
-    ]
-
-
 @app.post("/append-row")
 async def create_row(
     page_content: str,
