@@ -131,6 +131,7 @@ def extract_text_from_pdf(pdf_path: str) -> str:
         return ""
 
 
+
 if __name__ == "__main__":
     import time
 
